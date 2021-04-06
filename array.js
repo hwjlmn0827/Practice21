@@ -20,8 +20,12 @@ arr = JSON.stringify(arr).replace(/\[|\]/g, '').split(',').map(i => parseFloat(i
 console.log(arr);
 
 // 4. 循环验证是否为数组 基于数组的some方法
-while(arr.some(item => Array.isArray(item))) {
+while (arr.some(item => Array.isArray(item))) {
+    // 去一级
     arr = [].contat(...arr);
 }
+
+// 5. 循环验证是否为数组 递归
+// @Todo
 
 console.log(arr);
