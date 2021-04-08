@@ -11,7 +11,7 @@ arr = arr.flat(Infinity);
 console.log(arr);
 
 // 2. 字符串toString
-str = arr.toString();
+let str = arr.toString();
 arr = str.split(',').map(Number)
 console.log(arr);
 
