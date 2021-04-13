@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div class="box box1">
+        <span>inline</span>
+    </div>
+    <div class="box box2">99</div>
+    <div class="box inlineblock">inlineblock</div>
+    <div class="box box4">absolute</div>
+    <div class="box box5">absolute/2</div>
+    <div class="box box6">transform</div> -->
+    <div class="box flexbox">
+        <div class="flex">test1</div>
+        <div class="flex">test2</div>
+        <div class="flex">test3</div>
+        <div class="flex testflexitem">flex</div>
+    </div>
+</body>
+
+</html>
+
+<style type="text/css">
+    body {
+        height: 100%
+    }
+.box {
+    height: 100px;
+    border: 1px solid #ccc;
+    margin: 30px 0;
+}
+
+.box1 {
+    text-align: center;
+    line-height: 100px;
+}
+
+.box2 {
+    width: 30px;
+    margin: 0 auto;
+}
+
+.inlineblock {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 100px;
+}
+.box4 {
+    width: 300px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+}
+.box5 {
+    position: absolute;
+    background-color: blue;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+}
+
+.box6 {
+    background-color: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.flexbox {
+    display: flex;
+    width: 100%;
+    background-color: green;
+    align-items: center;
+    justify-content: space-around;
+}
+.flex {
+    flex: 1 1 auto;
+    /*align-self: start;*/
+    background-color: pink;
+}
+.testflexitem {
+    flex: 2 1 auto;
+}
+
+</style>

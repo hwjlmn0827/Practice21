@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p>Count numbers:
+        <output id="result">99</output>
+    </p>
+    <input type="button" onclick="startWorker()" value="Start Worker">
+    <input type="button" onclick="stopWorker()" value="Stop Worker">
+
+</body>
+
+</html>
+
+<script>
+var w;
+
+function startWorker() {
+    if (window.Worker) {
+        w = new Worker("./demo_workers.js");
+        w.onmessage = function (event) {
+            document.getElementById("result").innerHTML = event.data;
+        };
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+    }
+}
+
+/*原因在于chrome不允许通过本地文件访问使用Web Worker，解决办法：
+
+使用别的浏览器重新进行尝试，比如IE浏览器。
+将程序部署在服务器下，比如Tomcat。*/
+
+function stopWorker() {
+    w.terminate();
+}
+</script>
