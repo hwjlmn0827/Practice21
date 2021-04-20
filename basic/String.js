@@ -1,3 +1,40 @@
+//https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/normalize
+
+// String.prototype[@@iterator]()
+// String.prototype.charAt()
+// String.prototype.charCodeAt()
+// String.prototype.codePointAt()
+// String.prototype.concat()
+// String.prototype.endsWith()
+// String.prototype.startsWith()
+// String.fromCharCode()
+// String.fromCodePoint()
+// String.prototype.includes()
+// String.prototype.indexOf()
+// String.prototype.lastIndexOf()
+// String.prototype.localeCompare()
+// String.prototype.match()
+// String.prototype.matchAll()
+// String.prototype.normalize()
+// String.prototype.padEnd()
+// String.prototype.padStart()
+// String.raw()
+// String.prototype.repeat()
+// String.prototype.replace()
+// String.prototype.replaceAll()
+// String.prototype.search()
+// String.prototype.slice()
+// String.prototype.split()
+// String.prototype.toLocaleLowerCase()
+// String.prototype.toLocaleUpperCase()
+// String.prototype.toString()
+// String.prototype.toUpperCase()
+// String.prototype.trim()
+// String.prototype.trimEnd()
+// String.prototype.trimStart()
+// String.prototype.valueOf()
+
+
 //indexOf 
 //注意：从0开始计数
 var str = "HelloWorld!"
