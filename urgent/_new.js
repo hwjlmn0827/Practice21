@@ -1,7 +1,9 @@
-
-var parent = function(name, age) {
+var Parent = function (name, age) {
     this.name = name;
     this.age = age;
+    return {
+        prop: 'test'
+    }; //构造函数return一个对象的时候? #todo
 }
 
 Parent.prototype.sayName = function () {
@@ -17,10 +19,23 @@ var newMethod = function (Parent, ...rest) {
     return child;
 };
 
-const child = newMethod(Parent, 'echo', 26);
+//无参数版
+var myNew = function () {
+    var res = {};
+    // 拿出第一个构造函数参数
+    let construct = Array.prototype.shift.call(arguments);
+    res.__proto__ = construct.prototype;
+    console.log(arguments);
+    construct.apply(res, arguments);
+    return res;
+}
+
+
+// const child = newMethod(Parent, 'echo', 26);
+let child = myNew(Parent, 'echo', 26);
 child.sayName()
 
-child instanceof Parent//true
-child.hasOwnProperty('name')//true
-child.hasOwnProperty('age')//true
-child.hasOwnProperty('sayName')//false
+child instanceof Parent //true
+child.hasOwnProperty('name') //true
+child.hasOwnProperty('age') //true
+child.hasOwnProperty('sayName') //false

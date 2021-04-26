@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="example-3">
+        <button v-on:click="say('hi')">Say hi</button>
+        <button v-on:click="warn('Form cannot be submitted yet.', $event)">
+            Submit
+        </button>
+    </div>
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script>
+new Vue({
+    el: '#example-3',
+    methods: {
+        say: function (message) {
+            alert(message)
+        },
+        warn: function (message, event) {
+            // 现在我们可以访问原生事件对象
+            if (event) {
+                event.preventDefault()
+            }
+        }
+    }
+})
+</script>
