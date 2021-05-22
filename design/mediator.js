@@ -27,7 +27,7 @@ var mediator = (function () {
 })();
 
 colorSelect.onchange = function () {
-    mediator.changed(this);
+    mediator.changed(this); 
 };
 memorySelect.onchange = function () {
     mediator.changed(this);
