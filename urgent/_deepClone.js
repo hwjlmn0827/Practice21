@@ -1,6 +1,7 @@
 //定义检测数组类型的功能函数
 function checkType(target) {
-    return Object.prototype.toString.call(target).slice(8, -1)
+    // Object.prototype.toString.call() =>  [object array] slice 第一个参数包含，第二个不包含
+    return Object.prototype.toString.call(target).slice(8, -1) 
 }
 
 //实现深度克隆 obj / arr
@@ -11,9 +12,11 @@ function clone(target) {
     } else if (targetType === 'Array') {
         result = [];
     } else {
+        // 基本上是基本数据类型
         return target;
     }
 
+    // in in in in
     for (let i in target) {
         let val = target[i]
         //判断目标结构中是否嵌套了对象/数组
@@ -24,6 +27,7 @@ function clone(target) {
             result[i] = val;
         }
     }
+    
     return result;
 }
 
