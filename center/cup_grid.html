@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>圣杯</h1>
+    <div class="container">
+        <div class='top'>top</div>
+        <div class='left'>left</div>
+        <div class='middle'>middle</div>
+        <div class='right'>right</div>
+        <div class='tail'>tail</div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    body {
+        background-color: lightblue;
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+        padding-left: 50px;
+    }
+
+    .container {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: 100px auto 100px;
+        grid-template-rows: 30px auto 30px;
+        grid-template-areas: "top top top" "left middle right" "tail tail tail";
+    }
+
+    .top {
+        grid-area: top;
+        background-color: azure;
+    }
+
+    .left {
+        grid-area: left;
+        background-color:blue
+    }
+
+    .middle {
+        grid-area: middle;
+        background-color: rgb(32, 44, 44);
+    }
+
+    .right {
+        grid-area: right;
+        background-color: rgb(33, 97, 54);
+    }
+
+    .tail {
+        grid-area: tail;
+        background-color: rgb(76, 187, 187);
+    }
+
+    p {
+        font-family: verdana;
+        font-size: 20px;
+        padding-left: 20px;
+    }
+
+    span {
+        margin-left: 40px;
+        padding-top: 50px
+    }
+</style>

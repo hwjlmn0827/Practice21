@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>圣杯flex</h1>
+    <div class="container">
+        <div class='top'>top</div>
+        <div class="mcontainer">
+            <div class='left'>left</div>
+            <div class='middle'>middle</div>
+            <div class='right'>right</div>
+        </div>
+        <div class='tail'>tail</div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    body {
+        background-color: lightblue;
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+        padding-left: 50px;
+    }
+
+    .container {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top,
+    .mcontainer,
+    .tail {
+        width: 100%;
+        flex: 1;
+    }
+
+    .top {
+        background-color: azure;
+    }
+
+    .tail {
+        background-color: rgb(76, 187, 187);
+    }
+
+
+    .mcontainer {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .left {
+        width: 10%;
+        flex: 0 0 auto;
+        background-color: blue
+    }
+    .middle {
+        flex:1; 
+        background-color: rgb(32, 44, 44);
+    }
+    .right {
+        width: 10%;
+        background-color: rgb(33, 97, 54);
+    }
+
+    p {
+        font-family: verdana;
+        font-size: 20px;
+        padding-left: 20px;
+    }
+    span {
+        margin-left: 40px;
+        padding-top: 50px
+    }
+</style>
